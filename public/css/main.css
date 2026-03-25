@@ -46,7 +46,7 @@ header {
   width: 100%;
   top: 0;
   background: var(--header-bg);
-  padding: 20px 90px;
+  padding: 20px clamp(2px, 4.2vw, 110px);
 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -70,7 +70,7 @@ nav ul a {
   text-decoration: none;
   font-weight: 500;
   color: var(--link-color);
-  transition: all 0.2ms ease;
+  transition: all 0.2s ease;
 
   &:hover {
     color: var(--primary-color);
@@ -114,7 +114,7 @@ header .ti {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: clamp(70px, 12vw, 120px);
 }
 
 .hero-post {
@@ -122,9 +122,9 @@ main {
   justify-content: space-between;
   align-items: stretch;
   background: var(--primary-color);
-  margin: 0px 90px 110px;
+  margin: 0px clamp(2px, 4.2vw, 110px) clamp(10px, 5vw, 120px);
   border-radius: 45px;
-  padding: 40px;
+  padding: clamp(20px, 2.1vw, 55px);
 }
 
 .hero-content {
@@ -137,15 +137,15 @@ main {
   display: flex;
 }
 
-.post-tags .tag {
+.hero-content .post-tags .tag {
   border: 2px solid white;
   border-radius: 25px;
-  padding: 5px 30px;
+  padding: clamp(2px, 0.3vw, 8px) clamp(15px, 1.6vw, 35px);
   margin: 0px 8px 0px 0px;
   letter-spacing: 1px;
   color: white;
   font-weight: 600;
-  font-size: 28px;
+  font-size: clamp(10px, 1.5vw, 30px);
 }
 
 .hero-post .post-image {
@@ -157,9 +157,7 @@ main {
 }
 
 .hero-content .post-title {
-  position: relative;
-  top: -20px;
-  font-size: 90px;
+  font-size: clamp(2px, 4.7vw, 120px);
   max-width: 70%;
   line-height: 1;
   font-weight: 600;
@@ -170,18 +168,18 @@ main {
   display: flex;
   align-items: center;
   color: white;
-  font-size: 28px;
+  font-size: clamp(10px, 1.5vw, 30px);
   font-weight: 500;
 }
 
 .post-meta .author .ti {
   color: white;
-  font-size: 34px;
+  font-size: clamp(15px, 1.8vw, 40px);
   margin-right: 5px;
 }
 
 .latest-posts {
-  margin: 0px 90px;
+  margin: 0px clamp(2px, 4.2vw, 110px);
 }
 
 .latest-posts .posts-grid {
@@ -191,10 +189,41 @@ main {
   margin: 30px 0px;
 }
 
+@media (max-width: 768px) {
+  .latest-posts .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-post {
+    position: relative;
+    background: transparent;
+  }
+  .hero-post .post-image {
+    aspect-ratio: unset;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .hero-content {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
 .latest-posts h2 {
   color: var(--text-color);
   font-weight: 500;
-  font-size: 64px;
+  font-size: 64px clamp(20px, 3.4vw, 80px);
 }
 
 .latest-posts .posts-grid .post-card .post-image-wrapper {
@@ -202,6 +231,22 @@ main {
   border-radius: 45px;
   width: 100%;
   overflow: hidden;
+}
+
+.latest-posts .post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.latest-posts .post-tags .tag {
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: clamp(2px, 0.3vw, 8px) clamp(15px, 1.6vw, 35px);
+  letter-spacing: 1px;
+  color: white;
+  font-weight: 600;
+  font-size: clamp(10px, 1.5vw, 30px);
 }
 
 .latest-posts .posts-grid .post-card .post-image-wrapper .post-image {
@@ -232,6 +277,6 @@ main {
   .post-title {
   color: white;
   font-weight: 600;
-  font-size: 48px;
+  font-size: clamp(15px, 2.7vw, 70px);
   margin-top: 20px;
 }
