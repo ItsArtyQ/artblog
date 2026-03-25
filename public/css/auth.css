@@ -54,14 +54,14 @@ img {
 
 .auth-left-content .welcome {
   color: var(--primary-color);
-  font-size: 120px;
+  font-size: clamp(50px, 6.3vw, 150px);
   font-weight: 700px;
   margin-bottom: 10px;
 }
 
 .auth-left-content .welcome-back {
   color: var(--primary-color);
-  font-size: 120px;
+  font-size: clamp(50px, 6.3vw, 150px);
   font-weight: 700px;
   margin-bottom: 10px;
   max-width: 99%;
@@ -91,12 +91,16 @@ img {
   }
 }
 
+.auth-card {
+  padding: 25px;
+}
+
 .auth-card h2 {
   text-align: center;
   color: var(--primary-color);
   font-weight: 700px;
   margin-bottom: 20px;
-  font-size: 85px;
+  font-size: clamp(50px, 4.5vw, 120px);
 }
 
 .auth-card p {
