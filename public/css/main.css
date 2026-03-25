@@ -1,3 +1,21 @@
+:root {
+  --bg-color: linear-gradient(315deg, #e7e7e7, #ede8ff);
+  --text-color: black;
+  --primary-color: #6a00ff;
+  --header-bg: rgba(255, 255, 255, 0.5);
+  --link-color: #4d4d4d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: linear-gradient(315deg, #191919, #282630);
+    --text-color: white;
+    --primary-color: #6a00ff;
+    --header-bg: rgba(30, 30, 30, 0.5);
+    --link-color: white;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +24,8 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: linear-gradient(315deg, #e7e7e7, #ede8ff);
-  color: black;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 a {
@@ -27,7 +45,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--header-bg);
   padding: 20px 90px;
 
   backdrop-filter: blur(10px);
@@ -51,11 +69,11 @@ nav ul {
 nav ul a {
   text-decoration: none;
   font-weight: 500;
-  color: #4d4d4d;
+  color: var(--link-color);
   transition: all 0.2ms ease;
 
   &:hover {
-    color: #6a00ff;
+    color: var(--primary-color);
   }
 }
 
@@ -72,11 +90,11 @@ header .login {
   align-items: center;
   padding: 5px 35px;
   background: transparent;
-  border: 2px solid #6a00ff;
+  border: 2px solid var(--primary-color);
   border-radius: 25px;
   font-weight: 700;
   font-size: 18px;
-  color: #6a00ff;
+  color: var(--primary-color);
   cursor: pointer;
   transition: all 0.2s ease;
 
@@ -103,7 +121,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  background: #6a00ff;
+  background: var(--primary-color);
   margin: 0px 90px 110px;
   border-radius: 45px;
   padding: 40px;
@@ -174,7 +192,7 @@ main {
 }
 
 .latest-posts h2 {
-  color: black;
+  color: var(--text-color);
   font-weight: 500;
   font-size: 64px;
 }
