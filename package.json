@@ -1,0 +1,30 @@
+{
+  "name": "artblog",
+  "version": "0.0.1",
+  "description": "Personal web application for blogging",
+  "homepage": "https://github.com/ItsArtyQ/artblog#readme",
+  "bugs": {
+    "url": "https://github.com/ItsArtyQ/artblog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsArtyQ/artblog.git"
+  },
+  "license": "MIT",
+  "author": "ItsArtyQ (Artem Knyazev)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
