@@ -29,14 +29,18 @@
           <h2>Вход в Аккаунт</h2>
           <p>Введите свое имя пользователя и пароль чтобы войти</p>
 
-          <form>
+          <form method="post" action="/login">
             <div class="input-group">
               <i class="ti ti-user"></i>
-              <input type="text" id="username" placeholder="Имя пользователя" />
+              <input
+                type="text"
+                name="username"
+                placeholder="Имя пользователя"
+              />
             </div>
             <div class="input-group">
               <i class="ti ti-lock-square-rounded"></i>
-              <input type="password" id="password" placeholder="Пароль" />
+              <input type="password" name="password" placeholder="Пароль" />
             </div>
             <p>
               Вы еще не зарегистрированы? <a href="/register">Регистрация</a>

@@ -1,6 +1,6 @@
 {
   "name": "artblog",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Personal web application for blogging",
   "homepage": "https://github.com/ItsArtyQ/artblog#readme",
   "bugs": {
@@ -19,9 +19,13 @@
     "dev": "nodemon index"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.2",
+    "cookie-parser": "^1.4.7",
     "dotenv": "^17.3.1",
     "ejs": "^5.0.1",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.3.2"
   },
   "devDependencies": {
