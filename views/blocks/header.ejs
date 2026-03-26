@@ -9,7 +9,8 @@
       </ul>
     </nav>
     <button onclick="location.href = '/login'" class="login">
-      <i class="ti ti-user-square-rounded"></i>Войти
+      <i class="ti ti-user-square-rounded"></i><%= user ? user.lastName + " " +
+      user.firstName : "Войти" %>
     </button>
   </div>
 </header>

@@ -3,7 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import routes from "./routes/router.js";
 import cookieParser from "cookie-parser";
-import { checkUser } from "./middleware/auth.js";
+import { attachUser, checkUser } from "./middleware/auth.js";
 
 const app = express();
 
@@ -14,6 +14,7 @@ app.set("view engine", "ejs");
 
 const port = process.env.PORT || 3000;
 
+app.use(attachUser);
 app.use(checkUser);
 app.use("/", routes);
 

@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import User from "../models/User.js";
 
 export function requireAuth(req, res, next) {
   const token = req.cookies?.token;
@@ -34,9 +35,6 @@ export function checkUser(req, res, next) {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    req.user = decoded;
-    res.locals.user = decoded;
-
     if (
       (!decoded.firstName || !decoded.lastName) &&
       req.path !== "/complete-account"
@@ -49,4 +47,25 @@ export function checkUser(req, res, next) {
     console.log("JWT error: ", e);
     next();
   }
+}
+
+export async function attachUser(req, res, next) {
+  const token = req.cookies?.token;
+  if (!token) {
+    res.locals.user = null;
+    return next();
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const user = await User.findById(decoded.id);
+
+    res.locals.user = user || null;
+    req.user = user;
+  } catch (e) {
+    console.log(e);
+    res.locals.user = null;
+  }
+
+  next();
 }

@@ -33,8 +33,6 @@ router.post("/complete-account", async (req, res) => {
 
     const user = await User.findById(userId);
 
-    console.log(user);
-
     user.firstName = normalizedFirstName;
     user.lastName = normalizedLastName;
 
@@ -55,8 +53,6 @@ router.post("/complete-account", async (req, res) => {
       secure: false,
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
-
-    console.log(jwt.verify(req.cookies.token, process.env.JWT_SECRET));
 
     res.redirect("/");
   } catch (e) {
@@ -100,7 +96,7 @@ router.post("/register", async (req, res) => {
       sameSite: "strict",
     });
 
-    res.redirect("/complete-account");
+    res.redirect("/");
   } catch (err) {
     console.error(err);
     res.send("Server error");
@@ -143,7 +139,7 @@ router.post("/login", async (req, res) => {
       sameSite: "strict",
     });
 
-    res.redirect("/complete-account");
+    res.redirect("/");
   } catch (err) {
     console.error(err);
     res.send("Server error");
