@@ -167,6 +167,10 @@ img {
   }
 }
 
+.auth-card .complete {
+  margin-top: 40px;
+}
+
 .auth-card a {
   color: var(--primary-color);
 }
