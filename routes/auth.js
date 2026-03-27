@@ -71,6 +71,10 @@ router.post("/register", async (req, res) => {
       return res.send("User already exists");
     }
 
+    if (password.length < 8) {
+      return res.send("Password must be at least 8 characters long");
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await User.create({
@@ -106,6 +110,8 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
+  console.log(`Username: ${username}, Password: ${password}`);
+
   const normalizedUsername = username.toLowerCase();
 
   try {
@@ -120,6 +126,8 @@ router.post("/login", async (req, res) => {
     if (!isMatch) {
       return res.send("Ivalid username or password");
     }
+
+    console.log(`${username}: Login succesful!`);
 
     const token = jwt.sign(
       {

@@ -37,7 +37,8 @@ export function checkUser(req, res, next) {
 
     if (
       (!decoded.firstName || !decoded.lastName) &&
-      req.path !== "/complete-account"
+      req.path !== "/complete-account" &&
+      req.path !== "/logout"
     ) {
       return res.redirect("/complete-account");
     }
