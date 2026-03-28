@@ -1,5 +1,43 @@
 <header>
   <h1><a href="/" class="logo">ArtBlog</a></h1>
+  <button id="burger" class="burgermenu">
+    <i class="ti ti-chevron-left"></i>
+  </button>
+  <nav id="nav-menu">
+    <ul>
+      <div class="burger-header">
+        <h1><a href="/" class="logo">ArtBlog</a></h1>
+        <button id="burger-close" class="burgermenu">
+          <i class="ti ti-chevron-right"></i>
+        </button>
+      </div>
+      <li><a href="/">Главная</a></li>
+      <li><a href="/posts">Все посты</a></li>
+      <li><a href="/about">Обо мне</a></li>
+      <button onclick="location.href = '/login'" class="login">
+        <i class="ti ti-user-square-rounded"></i><%= user ? user.lastName + " "
+        + user.firstName : "Войти" %>
+      </button>
+      <% if (user) { %>
+        <li>
+          <a href="#" class="special">Новый пост</a>
+        </li>
+        <li>
+          <a href="#" class="special">Управление пользователями</a>
+        </li>
+        <li>
+          <a href="#">Редактировать профиль</a>
+        </li>
+        <li>
+          <a href="#">Изменить пароль</a>
+        </li>
+        <li>
+          <a href="/logout" class="logout">Выйти</a>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+
   <div class="right-part">
     <nav>
       <ul>

@@ -110,8 +110,6 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
-  console.log(`Username: ${username}, Password: ${password}`);
-
   const normalizedUsername = username.toLowerCase();
 
   try {
@@ -126,8 +124,6 @@ router.post("/login", async (req, res) => {
     if (!isMatch) {
       return res.send("Ivalid username or password");
     }
-
-    console.log(`${username}: Login succesful!`);
 
     const token = jwt.sign(
       {
