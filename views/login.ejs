@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Вход | ArtBlog</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/auth.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
-    />
-  </head>
-  <body>
-    <div class="auth-page">
-      <div class="auth-left">
-        <div class="auth-left-content">
-          <h1 class="welcome-back">Снова привет!</h1>
-        </div>
-      </div>
 
-      <div class="auth-right">
-        <div class="auth-card">
-          <h2>Вход в Аккаунт</h2>
-          <p>Введите свое имя пользователя и пароль чтобы войти</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход | ArtBlog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/auth.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+</head>
 
-          <form method="post" action="/login">
-            <div class="input-group">
-              <i class="ti ti-user"></i>
-              <input
-                type="text"
-                name="username"
-                placeholder="Имя пользователя"
-              />
-            </div>
-            <div class="input-group">
-              <i class="ti ti-lock-square-rounded"></i>
-              <input type="password" name="password" placeholder="Пароль" />
-            </div>
-            <p>
-              Вы еще не зарегистрированы? <a href="/register">Регистрация</a>
-            </p>
-
-            <button type="submit">Войти</button>
-          </form>
-        </div>
+<body>
+  <div class="auth-page">
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <h1 class="welcome-back">Снова привет!</h1>
       </div>
     </div>
-  </body>
+
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Вход в Аккаунт</h2>
+        <p>Введите свое имя пользователя и пароль чтобы войти</p>
+
+        <form method="post" action="/login">
+          <div class="input-group">
+            <i class="ti ti-user"></i>
+            <input type="text" name="username" placeholder="Имя пользователя" />
+          </div>
+          <div class="input-group">
+            <i class="ti ti-lock-square-rounded"></i>
+            <input type="password" name="password" placeholder="Пароль" />
+          </div>
+          <p>
+            Вы еще не зарегистрированы? <a href="/register">Регистрация</a>
+          </p>
+
+          <button type="submit">Войти</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

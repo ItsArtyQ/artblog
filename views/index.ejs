@@ -1,106 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная | ArtBlog</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/index.css" />
-  </head>
-  <body>
-    <%- include('blocks/header') -%>
-    <main>
-      <section class="hero-post">
-        <div class="hero-content">
-          <div class="post-tags">
-            <span class="tag">ЖИЗНЬ</span>
-            <span class="tag">РАБОТА</span>
-          </div>
 
-          <h2 class="post-title">
-            Как я провел свой первый день на новой работе
-          </h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная | ArtBlog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/index.css" />
+</head>
 
-          <div class="post-meta">
-            <span class="author"
-              ><i class="ti ti-user-circle"></i>Князев Артём</span
-            >
-          </div>
+<body>
+  <%- include('blocks/header') -%>
+  <main>
+    <section class="hero-post">
+      <div class="hero-content">
+        <div class="post-tags">
+          <span class="tag">ЖИЗНЬ</span>
+          <span class="tag">РАБОТА</span>
         </div>
-        <div class="hero-image-wrapper">
-          <img
-            src="/images/posts/work.png"
-            alt="Обложка поста"
-            class="post-image"
-          />
-          <div class="hero-overlay"></div>
-        </div>
-      </section>
-      <section class="latest-posts">
-        <h2>СВЕЖИЕ ПОСТЫ</h2>
 
-        <div class="posts-grid">
-          <article class="post-card">
-            <div class="post-image-wrapper">
-              <img
-                src="/images/posts/javascript.png"
-                alt="Обложка поста"
-                class="post-image"
-              />
-              <div class="post-overlay">
-                <div class="post-meta">
-                  <span class="author"
-                    ><i class="ti ti-user-circle"></i>Князев Артём</span
-                  >
+        <h2 class="post-title">
+          Как я провел свой первый день на новой работе
+        </h2>
+
+        <div class="post-meta">
+          <span class="author"><i class="ti ti-user-circle"></i>Князев Артём</span>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="/images/posts/work.png" alt="Обложка поста" class="post-image" />
+        <div class="hero-overlay"></div>
+      </div>
+    </section>
+    <section class="latest-posts">
+      <h2>СВЕЖИЕ ПОСТЫ</h2>
+
+      <div class="posts-grid">
+        <article class="post-card">
+          <div class="post-image-wrapper">
+            <img src="/images/posts/javascript.png" alt="Обложка поста" class="post-image" />
+            <div class="post-overlay">
+              <div class="post-meta">
+                <span class="author"><i class="ti ti-user-circle"></i>Князев Артём</span>
+              </div>
+              <div>
+                <div class="post-tags">
+                  <span class="tag">Javascript</span>
+                  <span class="tag">Typescript</span>
                 </div>
-                <div>
-                  <div class="post-tags">
-                    <span class="tag">Javascript</span>
-                    <span class="tag">Typescript</span>
-                  </div>
-                  <h3 class="post-title">Мой 4 месяц изучения Javascript</h3>
-                </div>
+                <h3 class="post-title">Мой 4 месяц изучения Javascript</h3>
               </div>
             </div>
-          </article>
-          <article class="post-card">
-            <div class="post-image-wrapper">
-              <img
-                src="/images/posts/react.png"
-                alt="Обложка поста"
-                class="post-image"
-              />
-              <div class="post-overlay">
-                <div class="post-meta">
-                  <span class="author"
-                    ><i class="ti ti-user-circle"></i>Князев Артём</span
-                  >
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="post-image-wrapper">
+            <img src="/images/posts/react.png" alt="Обложка поста" class="post-image" />
+            <div class="post-overlay">
+              <div class="post-meta">
+                <span class="author"><i class="ti ti-user-circle"></i>Князев Артём</span>
+              </div>
+              <div>
+                <div class="post-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">React Native</span>
+                  <span class="tag">Frontend</span>
                 </div>
-                <div>
-                  <div class="post-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">React Native</span>
-                    <span class="tag">Frontend</span>
-                  </div>
-                  <h3 class="post-title">
-                    Мысли Backend Разработчика о React и React Native
-                  </h3>
-                </div>
+                <h3 class="post-title">
+                  Мысли Backend Разработчика о React и React Native
+                </h3>
               </div>
             </div>
-          </article>
-        </div>
-      </section>
-    </main>
-    <script src="/js/index.js"></script>
-  </body>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="/js/index.js"></script>
+</body>
+
 </html>

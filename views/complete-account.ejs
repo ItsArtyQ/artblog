@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Завершение регистрации | ArtBlog</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/auth.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
-    />
-  </head>
-  <body>
-    <div class="auth-page">
-      <div class="auth-left">
-        <div class="auth-left-content">
-          <h1 class="welcome-back">Еще чуть-чуть</h1>
-        </div>
-      </div>
 
-      <div class="auth-right">
-        <div class="auth-card">
-          <h2>Как вас зовут?</h2>
-          <p>Введите свое имя и фамилию чтобы продолжить</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Завершение регистрации | ArtBlog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/auth.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+</head>
 
-          <form method="post" action="/complete-account">
-            <div class="input-group">
-              <i class="ti ti-user"></i>
-              <input type="text" name="firstName" placeholder="Имя" />
-            </div>
-            <div class="input-group">
-              <i class="ti ti-user"></i>
-              <input type="text" name="lastName" placeholder="Фамилия" />
-            </div>
-
-            <button type="submit" class="complete">Продолжить</button>
-          </form>
-        </div>
+<body>
+  <div class="auth-page">
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <h1 class="welcome-back">Еще чуть-чуть</h1>
       </div>
     </div>
-  </body>
+
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Как вас зовут?</h2>
+        <p>Введите свое имя и фамилию чтобы продолжить</p>
+
+        <form method="post" action="/complete-account">
+          <div class="input-group">
+            <i class="ti ti-user"></i>
+            <input type="text" name="firstName" placeholder="Имя" />
+          </div>
+          <div class="input-group">
+            <i class="ti ti-user"></i>
+            <input type="text" name="lastName" placeholder="Фамилия" />
+          </div>
+
+          <button type="submit" class="complete">Продолжить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
